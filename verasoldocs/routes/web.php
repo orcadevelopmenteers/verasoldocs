@@ -203,6 +203,23 @@ Route::get('/docs/economic-substance', function () {
     return Inertia::render('docs/international/EconomicSubstance');
 })->name('docs.economic-substance');
 
+// Troubleshooting Documentation
+Route::get('/docs/common-issues', function () {
+    return Inertia::render('docs/troubleshooting/CommonIssues');
+})->name('docs.common-issues');
+
+Route::get('/docs/error-messages', function () {
+    return Inertia::render('docs/troubleshooting/ErrorMessages');
+})->name('docs.error-messages');
+
+Route::get('/docs/faq', function () {
+    return Inertia::render('docs/troubleshooting/Faq');
+})->name('docs.faq');
+
+Route::get('/docs/getting-help', function () {
+    return Inertia::render('docs/troubleshooting/GettingHelp');
+})->name('docs.getting-help');
+
 // AI Assistant Documentation
 Route::get('/docs/ai-introduction', function () {
     return Inertia::render('docs/ai/Introduction');
