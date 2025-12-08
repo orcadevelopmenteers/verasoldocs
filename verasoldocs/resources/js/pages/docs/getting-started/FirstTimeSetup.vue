@@ -147,14 +147,26 @@ import { Link } from '@inertiajs/vue3'
       <section class="mt-16">
         <div class="flex items-center gap-4">
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600 text-lg font-bold text-white">3</span>
-          <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Complete Your Profile</h2>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Complete Your Company Setup</h2>
         </div>
         
         <div class="ml-14 mt-6">
           <p class="text-lg text-slate-600 dark:text-slate-400">
-            After onboarding, Verasol shows a <strong class="text-slate-900 dark:text-white">System Readiness Card</strong> on your dashboard.
-            This helps you understand what information is required for various modules to work correctly.
+            After quick onboarding, you'll see a <strong class="text-slate-900 dark:text-white">System Readiness Card</strong> on your dashboard.
+            This guides you to complete your company profile with all the details needed for invoicing, VAT, and compliance.
           </p>
+
+          <div class="mt-6 rounded-2xl bg-blue-50 p-6 dark:bg-blue-900/20">
+            <h4 class="font-semibold text-blue-800 dark:text-blue-300">
+              <svg class="mr-2 inline-block h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+              </svg>
+              Where to complete your profile
+            </h4>
+            <p class="mt-2 text-blue-700 dark:text-blue-400">
+              Go to <strong>Settings → Company Info</strong> to add all company details. The System Readiness Card tracks your progress and disappears once required fields are complete.
+            </p>
+          </div>
 
           <div class="mt-8 space-y-6">
             <!-- Required for Professional Invoices -->
@@ -180,32 +192,90 @@ import { Link } from '@inertiajs/vue3'
               </ul>
             </div>
 
-            <!-- Recommended Information -->
+            <!-- All Available Company Fields -->
             <div class="rounded-2xl border border-slate-200 p-6 dark:border-slate-700">
-              <h4 class="text-lg font-semibold text-slate-900 dark:text-white">Recommended for Professional Appearance</h4>
-              <ul class="mt-4 space-y-3">
-                <li class="flex items-start gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500"></span>
-                  <div class="text-slate-600 dark:text-slate-400">
-                    <strong class="text-slate-900 dark:text-white">Company Logo:</strong>
-                    <span class="block text-sm mt-1">Shows on invoices, quotes, and all documents</span>
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500"></span>
-                  <div class="text-slate-600 dark:text-slate-400">
-                    <strong class="text-slate-900 dark:text-white">Trade License Number:</strong>
-                    <span class="block text-sm mt-1">Some clients may require this</span>
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500"></span>
-                  <div class="text-slate-600 dark:text-slate-400">
-                    <strong class="text-slate-900 dark:text-white">Phone & Website:</strong>
-                    <span class="block text-sm mt-1">Contact information for customers</span>
-                  </div>
-                </li>
-              </ul>
+              <h4 class="text-lg font-semibold text-slate-900 dark:text-white">Complete Company Information (in Settings → Company Info)</h4>
+              <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm">
+                All fields below can be filled at your convenience. Only address and TRN are required for invoices.
+              </p>
+              
+              <div class="mt-4 grid gap-4 sm:grid-cols-2">
+                <!-- Basic Information -->
+                <div>
+                  <h5 class="text-sm font-semibold text-slate-700 dark:text-slate-300">Basic Information</h5>
+                  <ul class="mt-2 space-y-2">
+                    <li class="flex items-start gap-2 text-sm">
+                      <span class="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-slate-400"></span>
+                      <span class="text-slate-600 dark:text-slate-400">Legal Name (Arabic)</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-sm">
+                      <span class="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-slate-400"></span>
+                      <span class="text-slate-600 dark:text-slate-400">Business Type</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-sm">
+                      <span class="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-slate-400"></span>
+                      <span class="text-slate-600 dark:text-slate-400">Trade License Number</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-sm">
+                      <span class="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-slate-400"></span>
+                      <span class="text-slate-600 dark:text-slate-400">Company Logo</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Contact & Location -->
+                <div>
+                  <h5 class="text-sm font-semibold text-slate-700 dark:text-slate-300">Contact & Location</h5>
+                  <ul class="mt-2 space-y-2">
+                    <li class="flex items-start gap-2 text-sm">
+                      <span class="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-slate-400"></span>
+                      <span class="text-slate-600 dark:text-slate-400">Phone & Email</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-sm">
+                      <span class="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-slate-400"></span>
+                      <span class="text-slate-600 dark:text-slate-400">Website</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-sm">
+                      <span class="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-slate-400"></span>
+                      <span class="text-slate-600 dark:text-slate-400">Emirates (e.g., Dubai, Abu Dhabi)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Financial Settings -->
+                <div>
+                  <h5 class="text-sm font-semibold text-slate-700 dark:text-slate-300">Financial Settings</h5>
+                  <ul class="mt-2 space-y-2">
+                    <li class="flex items-start gap-2 text-sm">
+                      <span class="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-slate-400"></span>
+                      <span class="text-slate-600 dark:text-slate-400">Currency (AED default)</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-sm">
+                      <span class="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-slate-400"></span>
+                      <span class="text-slate-600 dark:text-slate-400">Timezone</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-sm">
+                      <span class="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-slate-400"></span>
+                      <span class="text-slate-600 dark:text-slate-400">Date Format</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- VAT Information -->
+                <div>
+                  <h5 class="text-sm font-semibold text-slate-700 dark:text-slate-300">VAT Information</h5>
+                  <ul class="mt-2 space-y-2">
+                    <li class="flex items-start gap-2 text-sm">
+                      <span class="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-slate-400"></span>
+                      <span class="text-slate-600 dark:text-slate-400">VAT Registration Date</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-sm">
+                      <span class="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-slate-400"></span>
+                      <span class="text-slate-600 dark:text-slate-400">Filing Period (Monthly/Quarterly)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <!-- How to Complete Profile -->
